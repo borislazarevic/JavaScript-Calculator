@@ -5,3 +5,17 @@
   box-sizing: border-box;
   font-size: 23px;
 }
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculatorWrapper {
+  border: 2px solid black;
+  height: 480px;
+  max-width: 340px;
+}
