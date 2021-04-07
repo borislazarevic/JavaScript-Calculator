@@ -1,9 +1,52 @@
 /**** Basic Styles ****/
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-size: 23px;
+  font-family: caladea;
+}
+
+/**** Colors ****/
+
+:root {
+  --darkBlue: rgb(29, 82, 124);
+  --lightBlue: rgb(69, 154, 211);
+  --orangeGold: rgb(240, 120, 35);
+  --whiteGray: rgb(231, 242, 253);
+  --red: rgb(168, 10, 10);
+  --green: rgb(93, 140, 33);
+  --border: rgb(64, 58, 66);
+  --white: rgb(255, 255, 255);
+}
+
+/**** Fonts ****/
+
+@font-face {
+  font-family: caladea;
+  src: url(/fonts/Caladea-Regular.ttf);
+}
+
+@font-face {
+  font-family: calc;
+  src: url(/fonts/DS-DIGIT.TTF);
+}
+
+/**** Calculator ****/
+
+h1 {
+  font-size: 1.2rem;
+  color: var(--darkBlue);
+  letter-spacing: 1px;
+}
+
+p {
+  color: var(--darkBlue);
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 .container {
@@ -15,7 +58,78 @@
 }
 
 .calculatorWrapper {
-  border: 2px solid black;
-  height: 480px;
+  border: 2px solid var(--border);
+  margin: 10px 0;
+  height: 483px;
   max-width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper input[type="text"] {
+  background-color: var(--whiteGray);
+  font-family: calc;
+  height: 40px;
+  width: 100%;
+  outline: 0;
+  border: none;
+  text-align: right;
+  padding-right: 5px;
+}
+
+.inputWrapper input[type="text"]:first-child {
+  font-size: 1.5rem;
+  color: var(--darkBlue);
+}
+
+.inputWrapper input[type="text"]:last-child {
+  font-size: 1.9rem;
+  color: var(--orangeGold);
+}
+
+.row {
+  display: flex;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  color: var(--whiteGray);
+  font-family: calc;
+  font-size: 1.3rem;
+  outline: none;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: var(--white);
+  border-radius: 15px;
+  transform: scale(1.1);
+}
+
+.number {
+  background-color: var(--lightBlue);
+}
+
+.operation,
+.backspace {
+  background-color: var(--darkBlue);
+}
+
+.equal {
+  background-color: var(--green);
+}
+
+.clearAll {
+  background-color: var(--red);
+}
+
+.clearAll:hover {
+  background-color: var(--orangeGold);
 }
