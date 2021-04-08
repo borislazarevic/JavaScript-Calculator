@@ -106,12 +106,12 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
-.btn:hover {
+/* .btn:hover {
   cursor: pointer;
   color: var(--white);
   border-radius: 15px;
   transform: scale(1.1);
-}
+} */
 
 .number {
   background-color: var(--lightBlue);
@@ -130,6 +130,14 @@ p {
   background-color: var(--red);
 }
 
-.clearAll:hover {
-  background-color: var(--orangeGold);
+@media (hover: hover) {
+  .btn:hover {
+    cursor: pointer;
+    color: var(--white);
+    border-radius: 15px;
+    transform: scale(1.1);
+  }
+  .clearAll:hover {
+    background-color: var(--orangeGold);
+  }
 }

@@ -16,6 +16,9 @@ let isDot = false;
 displayElement.value = "0";
 displayResult.value = "0";
 
+displayElement.disabled = true;
+displayResult.disabled = true;
+
 /**** Adding numbers to displayElement ****/
 
 number.forEach(num => {
