@@ -25,12 +25,12 @@
 
 @font-face {
   font-family: caladea;
-  src: url(/fonts/Caladea-Regular.ttf);
+  src: url(./fonts/Caladea-Regular.ttf);
 }
 
 @font-face {
   font-family: calc;
-  src: url(/fonts/DS-DIGIT.TTF);
+  src: url(./fonts/DS-DIGIT.TTF);
 }
 
 /**** Calculator ****/
