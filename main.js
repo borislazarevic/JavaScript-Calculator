@@ -13,6 +13,8 @@ let inputEl2 = "";
 let result = null;
 let mathOperation = "";
 let isDot = false;
+displayElement.value = "0";
+displayResult.value = "0";
 
 /**** Adding numbers to displayElement ****/
 
@@ -29,7 +31,7 @@ number.forEach(num => {
   });
 });
 
-/**** Operations ****/
+/**** Operations and Calculation ****/
 
 operation.forEach(op => {
   op.addEventListener("click", e => {
@@ -44,7 +46,6 @@ operation.forEach(op => {
 
     displayCalculationInput(operationName);
     mathOperation = operationName;
-    console.log(result);
   });
 });
 
@@ -82,5 +83,23 @@ equal.addEventListener("click", e => {
   displayElement.value = inputEl2;
   inputEl1 = result.toFixed(2).replace(/\.00$/, "");
   displayResult.value = inputEl1;
+  inputEl2 = "";
+});
+
+/**** Clear All Button ****/
+
+clearAll.addEventListener("click", e => {
+  displayElement.value = "0";
+  displayResult.value = "0";
+  inputEl1 = "";
+  inputEl2 = "";
+});
+
+/**** Backspace ****/
+backspace.addEventListener("click", e => {
+  if (!inputEl1) return;
+  inputEl1 = displayElement.value.slice(0, -1);
+  displayElement.value = inputEl1;
+  displayResult.value = inputEl2;
   inputEl2 = "";
 });
