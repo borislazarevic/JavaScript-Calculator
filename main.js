@@ -106,3 +106,73 @@ backspace.addEventListener("click", e => {
   displayResult.value = inputEl2;
   inputEl2 = "";
 });
+
+/**** Keyboard ****/
+
+window.addEventListener("keydown", e => {
+  switch (e.key) {
+    case "0":
+    case "1":
+    case "2":
+    case "3":
+    case "4":
+    case "5":
+    case "6":
+    case "7":
+    case "8":
+    case "9":
+    case ".":
+      numberClick(e.key);
+      break;
+    case "+":
+    case "-":
+      operationClick(e.key);
+      break;
+    case "*":
+      operationClick("×");
+      break;
+    case "/":
+      operationClick("÷");
+      break;
+    case "=":
+      eqaulClick(e.key);
+      break;
+    case "Enter":
+      eqaulClick(e.key);
+      break;
+    case "Backspace":
+      backspaceClick(e.key);
+      break;
+    case "Delete":
+      clearAllClick(e.key);
+      break;
+  }
+});
+
+function numberClick(key) {
+  number.forEach(num => {
+    if (num.value === key) {
+      num.click();
+    }
+  });
+}
+
+function operationClick(key) {
+  operation.forEach(op => {
+    if (op.value === key) {
+      op.click();
+    }
+  });
+}
+
+function eqaulClick(key) {
+  equal.click();
+}
+
+function backspaceClick(key) {
+  backspace.click();
+}
+
+function clearAllClick(key) {
+  clearAll.click();
+}
